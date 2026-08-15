@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Isle of Scents | Signature Fragrances, House of Nigeria</title>
+<meta name="description" content="Isle of Scents — discover a fragrance wardrobe of rare, long-lasting perfumes crafted for those who leave a trail worth remembering.">
+
+<!-- Fonts: Playfair Display for display type, Poppins for body/UI -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- ================= PRELOADER ================= -->
+<div class="preloader" id="preloader" aria-hidden="true">
+  <div class="preloader__mark">
+    <span class="preloader__initial">I</span>
+    <svg class="preloader__wave" viewBox="0 0 120 20" xmlns="http://www.w3.org/2000/svg">
+      <path d="M0 10 C 15 0, 25 20, 40 10 S 65 0, 80 10 S 105 20, 120 10" />
+    </svg>
+    <span class="preloader__initial">S</span>
+  </div>
+  <p class="preloader__label">Isle of Scents</p>
+</div>
+
+<!-- ================= SITE HEADER / NAV ================= -->
+<header class="site-header" id="siteHeader">
+  <div class="nav-inner">
+    <a href="#top" class="brand">
+      <span class="brand__mark">Isle<span class="brand__mark-divider">of</span>Scents</span>
+    </a>
+
+    <nav class="main-nav" id="mainNav">
+      <ul>
+        <li><a href="#collection">Collection</a></li>
+        <li><a href="#bestsellers">Best Sellers</a></li>
+        <li><a href="#why">Our Promise</a></li>
+        <li><a href="#reviews">Reviews</a></li>
+        <li><a href="#newsletter">Journal</a></li>
+      </ul>
+    </nav>
+
+    <div class="nav-actions">
+      <button class="icon-btn" id="cartToggle" aria-label="Open shopping bag" aria-expanded="false" aria-controls="cartDrawer">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M6 8h12l-1 12H7L6 8Z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/></svg>
+        <span class="cart-count" id="cartCount">0</span>
+      </button>
+      <button class="icon-btn menu-toggle" id="menuToggle" aria-label="Open menu" aria-expanded="false" aria-controls="mainNav">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- ================= HERO ================= -->
+  <section class="hero" id="hero">
+    <div class="hero__media" aria-hidden="true">
+      <img src="https://images.unsplash.com/photo-1541643600914-78b084683601?q=80&w=1800&auto=format&fit=crop"
+           alt="" class="hero__img" data-fallback="hero">
+      <div class="hero__scrim"></div>
+      <canvas class="hero__mist" id="heroMist" aria-hidden="true"></canvas>
+    </div>
+
+    <div class="hero__content">
+      <p class="eyebrow reveal" data-reveal>The Isle Collection &mdash; 2026</p>
+      <h1 class="hero__headline reveal" data-reveal>Discover Your <em>Signature</em> Scent</h1>
+      <p class="hero__tagline reveal" data-reveal>Rare accords, house-blended in small batches for those who prefer to be remembered rather than noticed.</p>
+      <div class="hero__actions reveal" data-reveal>
+        <a href="#collection" class="btn btn--gold">Shop Collection</a>
+        <a href="#bestsellers" class="btn btn--ghost">Best Sellers</a>
+      </div>
+    </div>
+
+    <svg class="tideline tideline--hero" viewBox="0 0 1440 60" preserveAspectRatio="none" aria-hidden="true">
+      <path d="M0 30 C 120 0, 240 60, 360 30 S 600 0, 720 30 S 960 60, 1080 30 S 1320 0, 1440 30" />
+    </svg>
+  </section>
+
+  <!-- ================= FEATURED COLLECTION ================= -->
+  <section class="section" id="collection">
+    <div class="container">
+      <div class="section__head reveal" data-reveal>
+        <p class="eyebrow">Featured Collection</p>
+        <h2>Six Scents, One Shoreline</h2>
+        <p class="section__intro">Every bottle in the Isle wardrobe is built around a single walk along the coast &mdash; from the first salt-bright note to the warm amber left on skin by nightfall.</p>
+      </div>
+
+      <div class="product-grid" id="productGrid"><!-- Injected by script.js --></div>
+    </div>
+  </section>
+
+  <div class="divider-wrap" aria-hidden="true">
+    <svg class="tideline" viewBox="0 0 1440 40" preserveAspectRatio="none">
+      <path d="M0 20 C 120 0, 240 40, 360 20 S 600 0, 720 20 S 960 40, 1080 20 S 1320 0, 1440 20" />
+    </svg>
+  </div>
+
+  <!-- ================= BEST SELLERS ================= -->
+  <section class="section section--dark" id="bestsellers">
+    <div class="container">
+      <div class="section__head section__head--light reveal" data-reveal>
+        <p class="eyebrow eyebrow--gold">Best Sellers</p>
+        <h2>The Three Most Worn</h2>
+        <p class="section__intro">The fragrances our clients reorder before the bottle is even empty.</p>
+      </div>
+
+      <div class="bestseller-grid" id="bestsellerGrid"><!-- Injected by script.js --></div>
+    </div>
+  </section>
+
+  <!-- ================= WHY CHOOSE US ================= -->
+  <section class="section" id="why">
+    <div class="container">
+      <div class="section__head reveal" data-reveal>
+        <p class="eyebrow">Our Promise</p>
+        <h2>Why Choose Isle of Scents</h2>
+      </div>
+
+      <div class="feature-grid">
+        <article class="feature-card reveal" data-reveal>
+          <div class="feature-card__icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><path d="M12 2 3 6v6c0 5 3.8 8.7 9 10 5.2-1.3 9-5 9-10V6l-9-4Z"/><path d="m8.5 12.5 2.3 2.3 4.7-4.8"/></svg>
+          </div>
+          <h3>100% Authentic</h3>
+          <p>Every fragrance is sourced directly from licensed houses and verified before it reaches your door.</p>
+        </article>
+
+        <article class="feature-card reveal" data-reveal>
+          <div class="feature-card__icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><path d="M12 22c5-4 8-8.5 8-13a8 8 0 1 0-16 0c0 4.5 3 9 8 13Z"/><circle cx="12" cy="9" r="2.5"/></svg>
+          </div>
+          <h3>Long-Lasting Wear</h3>
+          <p>Formulated for 8&ndash;12 hours of projection, from the morning meeting to the evening after.</p>
+        </article>
+
+        <article class="feature-card reveal" data-reveal>
+          <div class="feature-card__icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><path d="M3 7h11v9H3z"/><path d="M14 10h4l3 3v3h-7z"/><circle cx="7" cy="18" r="1.6"/><circle cx="18" cy="18" r="1.6"/></svg>
+          </div>
+          <h3>Nationwide Delivery</h3>
+          <p>Dispatched from Lagos with tracked, discreet packaging &mdash; delivered anywhere in Nigeria.</p>
+        </article>
+
+        <article class="feature-card reveal" data-reveal>
+          <div class="feature-card__icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><rect x="4" y="10" width="16" height="10" rx="1.5"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg>
+          </div>
+          <h3>Secure Payments</h3>
+          <p>Checkout is encrypted end-to-end, with support for card, transfer, and pay-on-delivery.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <div class="divider-wrap" aria-hidden="true">
+    <svg class="tideline" viewBox="0 0 1440 40" preserveAspectRatio="none">
+      <path d="M0 20 C 120 40, 240 0, 360 20 S 600 40, 720 20 S 960 0, 1080 20 S 1320 40, 1440 20" />
+    </svg>
+  </div>
+
+  <!-- ================= REVIEWS ================= -->
+  <section class="section section--sand" id="reviews">
+    <div class="container">
+      <div class="section__head reveal" data-reveal>
+        <p class="eyebrow">Reviews</p>
+        <h2>What Our Clients Say</h2>
+      </div>
+
+      <div class="review-grid">
+        <article class="review-card reveal" data-reveal>
+          <div class="review-card__stars" aria-label="5 out of 5 stars">★★★★★</div>
+          <p class="review-card__quote">I have never had a scent last from my 7am commute to a dinner at 9pm. Amber Isle does that without being loud about it.</p>
+          <div class="review-card__author">
+            <span class="review-card__name">Aisha B.</span>
+            <span class="review-card__loc">Lagos</span>
+          </div>
+        </article>
+
+        <article class="review-card reveal" data-reveal>
+          <div class="review-card__stars" aria-label="5 out of 5 stars">★★★★★</div>
+          <p class="review-card__quote">The packaging alone felt like a gift. My wife thought I'd flown to Paris for it. Delivery to Abuja took two days.</p>
+          <div class="review-card__author">
+            <span class="review-card__name">Chidi O.</span>
+            <span class="review-card__loc">Abuja</span>
+          </div>
+        </article>
+
+        <article class="review-card reveal" data-reveal>
+          <div class="review-card__stars" aria-label="5 out of 5 stars">★★★★★</div>
+          <p class="review-card__quote">I've bought designer perfume that faded by lunch. Coral Musk from Isle of Scents is still on my scarf the next morning.</p>
+          <div class="review-card__author">
+            <span class="review-card__name">Funmilayo A.</span>
+            <span class="review-card__loc">Port Harcourt</span>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= NEWSLETTER ================= -->
+  <section class="newsletter" id="newsletter">
+    <div class="container newsletter__inner reveal" data-reveal>
+      <p class="eyebrow eyebrow--gold">The Isle Journal</p>
+      <h2>Be First to Know</h2>
+      <p class="newsletter__copy">New arrivals, limited batches, and invitations to private scent fittings &mdash; straight to your inbox, never more than twice a month.</p>
+
+      <form class="newsletter__form" id="newsletterForm" novalidate>
+        <label for="newsletterEmail" class="sr-only">Email address</label>
+        <input type="email" id="newsletterEmail" name="email" placeholder="Enter your email address" required>
+        <button type="submit" class="btn btn--gold">Subscribe</button>
+      </form>
+      <p class="newsletter__status" id="newsletterStatus" role="status" aria-live="polite"></p>
+    </div>
+  </section>
+
+</main>
+
+<!-- ================= FOOTER ================= -->
+<footer class="site-footer">
+  <div class="container footer__grid">
+    <div class="footer__brand">
+      <span class="brand__mark brand__mark--footer">Isle<span class="brand__mark-divider">of</span>Scents</span>
+      <p>A house of fragrance built for Nigeria &mdash; small-batch, long-lasting, unmistakably yours.</p>
+    </div>
+
+    <div class="footer__col">
+      <h4>Explore</h4>
+      <ul>
+        <li><a href="#collection">Collection</a></li>
+        <li><a href="#bestsellers">Best Sellers</a></li>
+        <li><a href="#why">Our Promise</a></li>
+        <li><a href="#reviews">Reviews</a></li>
+      </ul>
+    </div>
+
+    <div class="footer__col">
+      <h4>Contact</h4>
+      <ul>
+        <li><a href="https://instagram.com/isleofscents" target="_blank" rel="noopener">Instagram &nbsp;@isleofscents</a></li>
+        <li><a href="https://wa.me/2348000000000" target="_blank" rel="noopener">WhatsApp &nbsp;+234 800 000 0000</a></li>
+        <li><a href="mailto:hello@isleofscents.com">hello@isleofscents.com</a></li>
+        <li>Lagos, Nigeria</li>
+      </ul>
+    </div>
+
+    <div class="footer__col">
+      <h4>Isle of Scents</h4>
+      <p class="footer__note">This is a concept demo built to preview a live storefront. All prices, products, and reviews are placeholders pending final brand assets.</p>
+    </div>
+  </div>
+
+  <div class="container footer__bottom">
+    <p>&copy; <span id="year"></span> Isle of Scents. All rights reserved.</p>
+  </div>
+</footer>
+
+<!-- ================= CART DRAWER ================= -->
+<div class="cart-overlay" id="cartOverlay"></div>
+<aside class="cart-drawer" id="cartDrawer" aria-hidden="true" aria-label="Shopping bag">
+  <div class="cart-drawer__head">
+    <h3>Your Bag</h3>
+    <button class="icon-btn" id="cartClose" aria-label="Close shopping bag">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M6 6l12 12M18 6 6 18"/></svg>
+    </button>
+  </div>
+
+  <div class="cart-drawer__items" id="cartItems">
+    <!-- Injected by script.js -->
+    <div class="cart-empty" id="cartEmpty">
+      <p>Your bag is currently empty.</p>
+      <a href="#collection" class="btn btn--ghost btn--sm" id="cartEmptyCta">Browse the Collection</a>
+    </div>
+  </div>
+
+  <div class="cart-drawer__footer" id="cartFooter">
+    <div class="cart-drawer__row">
+      <span>Subtotal</span>
+      <span id="cartSubtotal">&#8358;0</span>
+    </div>
+    <p class="cart-drawer__note">Shipping and any applicable duties are calculated at checkout.</p>
+    <button class="btn btn--gold btn--full" id="checkoutBtn" disabled>Checkout</button>
+  </div>
+</aside>
+
+<!-- ================= CHECKOUT MODAL (Demo Paystack-style) ================= -->
+<div class="modal-overlay" id="checkoutOverlay">
+  <div class="checkout-modal" role="dialog" aria-modal="true" aria-labelledby="checkoutTitle">
+    <button class="modal-close" id="checkoutClose" aria-label="Close checkout">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M6 6l12 12M18 6 6 18"/></svg>
+    </button>
+
+    <div class="checkout-modal__body" id="checkoutBody">
+      <div class="checkout-modal__badge">Demo Checkout &mdash; No Real Payment Will Be Taken</div>
+      <div class="checkout-modal__brand">
+        <span class="checkout-modal__brand-mark">Isle of Scents</span>
+        <span class="checkout-modal__brand-sub">Secure payment simulation</span>
+      </div>
+
+      <h2 id="checkoutTitle" class="sr-only">Demo Checkout</h2>
+
+      <div class="checkout-modal__amount">
+        <span>Amount to Pay</span>
+        <strong id="checkoutAmount">&#8358;0</strong>
+      </div>
+
+      <form id="checkoutForm">
+        <div class="field">
+          <label for="ckEmail">Email</label>
+          <input type="email" id="ckEmail" placeholder="you@email.com" required>
+        </div>
+        <div class="field">
+          <label for="ckCard">Card Number</label>
+          <input type="text" id="ckCard" inputmode="numeric" placeholder="4084 0840 8408 4081" maxlength="19" required>
+        </div>
+        <div class="field-row">
+          <div class="field">
+            <label for="ckExpiry">Expiry</label>
+            <input type="text" id="ckExpiry" placeholder="MM/YY" maxlength="5" required>
+          </div>
+          <div class="field">
+            <label for="ckCvv">CVV</label>
+            <input type="text" id="ckCvv" inputmode="numeric" placeholder="&bull;&bull;&bull;" maxlength="3" required>
+          </div>
+        </div>
+
+        <button type="submit" class="btn btn--gold btn--full" id="payBtn">
+          <span id="payBtnLabel">Pay Now</span>
+        </button>
+        <p class="checkout-modal__footnote">This modal simulates a Paystack-style flow for demonstration purposes only. Isle of Scents &mdash; PCI-DSS grade encryption on the live site.</p>
+      </form>
+    </div>
+
+    <div class="checkout-modal__success" id="checkoutSuccess">
+      <div class="success-check">
+        <svg viewBox="0 0 52 52"><circle cx="26" cy="26" r="24"/><path d="M14 27l7 7 17-17"/></svg>
+      </div>
+      <h3>Payment Successful</h3>
+      <p>This is a demo confirmation &mdash; on the live site, your receipt and order tracking would arrive by email instantly.</p>
+      <button class="btn btn--ghost" id="checkoutDone">Close</button>
+    </div>
+  </div>
+</div>
+
+<!-- Toast for add-to-cart confirmation -->
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<script src="script.js"></script>
+</body>
+</html>
